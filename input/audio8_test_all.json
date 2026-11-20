@@ -1,0 +1,668 @@
+{
+  "id": "b923079e-237f-4916-9c86-b1a022d4bbd1",
+  "revision": 0,
+  "last_node_id": 18,
+  "last_link_id": 22,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Audio8LoadModel",
+      "pos": [
+        -581.3223231241603,
+        -30.36531280551239
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            19
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Audio8LoadModel"
+      },
+      "widgets_values": [
+        "Edge0/Audio8-TTS-Realistic-Air"
+      ],
+      "widgets_values_named": {
+        "model_id": "Edge0/Audio8-TTS-Realistic-Air"
+      }
+    },
+    {
+      "id": 3,
+      "type": "PreviewAudio",
+      "pos": [
+        608.4716510861268,
+        99.8516583029079
+      ],
+      "size": [
+        270,
+        88
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.3",
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 4,
+      "type": "LoadAudio",
+      "pos": [
+        -935.8651751617274,
+        266.12403620673115
+      ],
+      "size": [
+        413.3257967845539,
+        179.48619645814824
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            3,
+            21
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.3",
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "LanguageTest.Brit.flac",
+        ""
+      ],
+      "widgets_values_named": {
+        "audio": "LanguageTest.Brit.flac",
+        "upload": ""
+      }
+    },
+    {
+      "id": 5,
+      "type": "Apply Whisper",
+      "pos": [
+        -423.4334429862951,
+        381.7308539137887
+      ],
+      "size": [
+        270,
+        146
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            6,
+            22
+          ]
+        },
+        {
+          "name": "segments_alignment",
+          "type": "whisper_alignment",
+          "links": null
+        },
+        {
+          "name": "words_alignment",
+          "type": "whisper_alignment",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-Whisper",
+        "ver": "006a709848259ed3d69e2f9fcfd7a75f6c860ddd",
+        "Node name for S&R": "Apply Whisper"
+      },
+      "widgets_values": [
+        "tiny.en",
+        "auto",
+        ""
+      ],
+      "widgets_values_named": {
+        "model": "tiny.en",
+        "language": "auto",
+        "prompt": ""
+      }
+    },
+    {
+      "id": 6,
+      "type": "PreviewAny",
+      "pos": [
+        -16.02347052038216,
+        447.9803136912807
+      ],
+      "size": [
+        210,
+        122
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.3",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 7,
+      "type": "Audio8LoadModel",
+      "pos": [
+        -657.4145215587755,
+        873.9221207312872
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Audio8LoadModel"
+      },
+      "widgets_values": [
+        "Edge0/Audio8-TTS-Realistic-Air"
+      ],
+      "widgets_values_named": {
+        "model_id": "Edge0/Audio8-TTS-Realistic-Air"
+      }
+    },
+    {
+      "id": 11,
+      "type": "PreviewAudio",
+      "pos": [
+        375.7191055390116,
+        890.5778796436139
+      ],
+      "size": [
+        270,
+        88
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.3",
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 13,
+      "type": "Audio8LoadModel",
+      "pos": [
+        -876.0448404981719,
+        1595.6158039835504
+      ],
+      "size": [
+        348.60088001598007,
+        101.90999811345878
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            15
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Audio8LoadModel"
+      },
+      "widgets_values": [
+        "Edge0/Audio8-TTS-Realistic-Air"
+      ],
+      "widgets_values_named": {
+        "model_id": "Edge0/Audio8-TTS-Realistic-Air"
+      }
+    },
+    {
+      "id": 15,
+      "type": "PreviewAudio",
+      "pos": [
+        204.1043547011775,
+        1611.3996227161897
+      ],
+      "size": [
+        270,
+        88
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.3",
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 16,
+      "type": "Audio8FromModel",
+      "pos": [
+        -479.39474019021077,
+        1609.421249817986
+      ],
+      "size": [
+        597.8543424945527,
+        465.10212851826486
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 15
+        },
+        {
+          "name": "sample_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Audio8FromModel"
+      },
+      "widgets_values": [
+        "Could you tell us where the best place for fish & chips is around here?\n{German} You must try the little place down by the harbour, just past the ferry wharf, because the fish is caught fresh that morning.\n{French} Perfect, let’s grab lunch there first!",
+        233,
+        "randomize",
+        "LanguageTest.flac",
+        0.75,
+        "TDHS",
+        "Text of sample_audio"
+      ],
+      "widgets_values_named": {
+        "speech": "Could you tell us where the best place for fish & chips is around here?\n{German} You must try the little place down by the harbour, just past the ferry wharf, because the fish is caught fresh that morning.\n{French} Perfect, let’s grab lunch there first!",
+        "seed": 233,
+        "control_after_generate": "randomize",
+        "sample": "LanguageTest.flac",
+        "speed": 0.75,
+        "speed_type": "TDHS",
+        "sample_text": "Text of sample_audio"
+      }
+    },
+    {
+      "id": 17,
+      "type": "Audio8FromModel",
+      "pos": [
+        -251.6525143832156,
+        864.11755421152
+      ],
+      "size": [
+        400,
+        282
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 17
+        },
+        {
+          "name": "sample_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Audio8FromModel"
+      },
+      "widgets_values": [
+        "This is what I want to say",
+        1578,
+        "randomize",
+        "",
+        1,
+        "TDHS",
+        "Text of sample_audio"
+      ],
+      "widgets_values_named": {
+        "speech": "This is what I want to say",
+        "seed": 1578,
+        "control_after_generate": "randomize",
+        "sample": "",
+        "speed": 1,
+        "speed_type": "TDHS",
+        "sample_text": "Text of sample_audio"
+      }
+    },
+    {
+      "id": 18,
+      "type": "Audio8FromModel",
+      "pos": [
+        106.7920523339302,
+        11.187268998203479
+      ],
+      "size": [
+        400,
+        282
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 19
+        },
+        {
+          "name": "sample_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 21
+        },
+        {
+          "name": "sample_text",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "sample_text"
+          },
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            20
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Audio8FromModel"
+      },
+      "widgets_values": [
+        "This is what I want to say",
+        1090,
+        "fixed",
+        "",
+        1,
+        "TDHS",
+        "Text of sample_audio"
+      ],
+      "widgets_values_named": {
+        "speech": "This is what I want to say",
+        "seed": 1090,
+        "control_after_generate": "fixed",
+        "sample": "",
+        "speed": 1,
+        "speed_type": "TDHS",
+        "sample_text": "Text of sample_audio"
+      }
+    }
+  ],
+  "links": [
+    [
+      3,
+      4,
+      0,
+      5,
+      0,
+      "AUDIO"
+    ],
+    [
+      6,
+      5,
+      0,
+      6,
+      0,
+      "STRING"
+    ],
+    [
+      15,
+      13,
+      0,
+      16,
+      0,
+      "MODEL"
+    ],
+    [
+      16,
+      16,
+      0,
+      15,
+      0,
+      "AUDIO"
+    ],
+    [
+      17,
+      7,
+      0,
+      17,
+      0,
+      "MODEL"
+    ],
+    [
+      18,
+      17,
+      0,
+      11,
+      0,
+      "AUDIO"
+    ],
+    [
+      19,
+      1,
+      0,
+      18,
+      0,
+      "MODEL"
+    ],
+    [
+      20,
+      18,
+      0,
+      3,
+      0,
+      "AUDIO"
+    ],
+    [
+      21,
+      4,
+      0,
+      18,
+      1,
+      "AUDIO"
+    ],
+    [
+      22,
+      5,
+      0,
+      18,
+      2,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Multi voice test",
+      "bounding": [
+        -937.492671695652,
+        1420.5907324836526,
+        1585.0470833476566,
+        678.2340051874999
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "No reference test",
+      "bounding": [
+        -977.9873806719196,
+        753.8751144016929,
+        1907.7515417960658,
+        564.245085572789
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "Whisper transcribe reference test",
+      "bounding": [
+        -1011.2578886176296,
+        -134.56953183019152,
+        1955.4187606190621,
+        771.1650435305859
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8264462809917372,
+      "offset": [
+        215.524745987592,
+        246.06229023215488
+      ]
+    },
+    "comfyui_mcp": {
+      "workflow_uuid": "c0b8ad98-1eaf-4239-9d56-b0676cd4cc2a"
+    },
+    "frontendVersion": "1.58.5"
+  },
+  "version": 0.4
+}

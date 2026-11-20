@@ -1,0 +1,180 @@
+{
+  "id": "006e2382-7fcf-4095-96bb-130fb0664e49",
+  "revision": 0,
+  "last_node_id": 5,
+  "last_link_id": 4,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "PreviewAudio",
+      "pos": [
+        324.2240028154208,
+        699.963766066905
+      ],
+      "size": [
+        270,
+        88
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.3",
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 4,
+      "type": "Audio8TTSFromModel",
+      "pos": [
+        -279.87382697156886,
+        671.7715409927459
+      ],
+      "size": [
+        400,
+        282
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 3
+        },
+        {
+          "name": "sample_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Audio8TTSFromModel"
+      },
+      "widgets_values": [
+        "This is what I want to say",
+        1752,
+        "randomize",
+        "",
+        1,
+        "TDHS",
+        "Text of sample_audio"
+      ],
+      "widgets_values_named": {
+        "speech": "This is what I want to say",
+        "seed": 1752,
+        "control_after_generate": "randomize",
+        "sample": "",
+        "speed": 1,
+        "speed_type": "TDHS",
+        "sample_text": "Text of sample_audio"
+      }
+    },
+    {
+      "id": 5,
+      "type": "Audio8TTSLoadModel",
+      "pos": [
+        -767.1206809878125,
+        680.2513727493101
+      ],
+      "size": [
+        363.9517578125,
+        58
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Audio8TTSLoadModel"
+      },
+      "widgets_values": [
+        "Edge0/Audio8-TTS-Realistic-Air"
+      ],
+      "widgets_values_named": {
+        "model_id": "Edge0/Audio8-TTS-Realistic-Air"
+      }
+    }
+  ],
+  "links": [
+    [
+      3,
+      5,
+      0,
+      4,
+      0,
+      "MODEL"
+    ],
+    [
+      4,
+      4,
+      0,
+      2,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "No reference test",
+      "bounding": [
+        -1029.4824833955104,
+        563.2610008249841,
+        1907.7515417960658,
+        564.245085572789
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.633698149900607,
+      "offset": [
+        972.0176808583885,
+        -115.65208084398809
+      ]
+    },
+    "frontendVersion": "1.58.5"
+  },
+  "version": 0.4
+}

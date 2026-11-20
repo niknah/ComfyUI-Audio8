@@ -1,0 +1,368 @@
+{
+  "id": "773fb847-cf2e-4cd1-9884-b61a23bad312",
+  "revision": 0,
+  "last_node_id": 10,
+  "last_link_id": 13,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "LoadAudio",
+      "pos": [
+        -107.70301215244285,
+        443.1391005117688
+      ],
+      "size": [
+        413.3257967845539,
+        179.48619645814824
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            8,
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.3",
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "LanguageTest.Brit.flac",
+        ""
+      ],
+      "widgets_values_named": {
+        "audio": "LanguageTest.Brit.flac",
+        "upload": ""
+      }
+    },
+    {
+      "id": 5,
+      "type": "PreviewAudio",
+      "pos": [
+        1465.796152596552,
+        375.063196464634
+      ],
+      "size": [
+        270,
+        88
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.3",
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 6,
+      "type": "PreviewAny",
+      "pos": [
+        1033.842878902284,
+        695.6825342999164
+      ],
+      "size": [
+        210,
+        122
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.3",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 7,
+      "type": "Audio8TTSLoadModel",
+      "pos": [
+        -34.77060668613021,
+        248.18067419199627
+      ],
+      "size": [
+        363.9517578125,
+        58
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Audio8TTSLoadModel"
+      },
+      "widgets_values": [
+        "Edge0/Audio8-TTS-Realistic-Air"
+      ],
+      "widgets_values_named": {
+        "model_id": "Edge0/Audio8-TTS-Realistic-Air"
+      }
+    },
+    {
+      "id": 8,
+      "type": "Audio8ASRLoadModel",
+      "pos": [
+        -90.5756950920342,
+        762.8610538353034
+      ],
+      "size": [
+        361.60703125,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Audio8ASRLoadModel"
+      },
+      "widgets_values": [
+        "Edge0/ARK-ASR-3B"
+      ],
+      "widgets_values_named": {
+        "model_id": "Edge0/ARK-ASR-3B"
+      }
+    },
+    {
+      "id": 9,
+      "type": "Audio8ASRFromModel",
+      "pos": [
+        549.0858398784164,
+        763.2490982255549
+      ],
+      "size": [
+        189.948828125,
+        46
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 9
+        },
+        {
+          "name": "speech_audio",
+          "type": "AUDIO",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            10,
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Audio8ASRFromModel"
+      }
+    },
+    {
+      "id": 10,
+      "type": "Audio8TTSFromModel",
+      "pos": [
+        860.7256868531659,
+        321.6059662162663
+      ],
+      "size": [
+        400,
+        282
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 12
+        },
+        {
+          "name": "sample_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "sample_text",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "sample_text"
+          },
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Audio8TTSFromModel"
+      },
+      "widgets_values": [
+        "This is what I want to say",
+        1510,
+        "randomize",
+        "",
+        1,
+        "TDHS",
+        "Text of sample_audio"
+      ],
+      "widgets_values_named": {
+        "speech": "This is what I want to say",
+        "seed": 1510,
+        "control_after_generate": "randomize",
+        "sample": "",
+        "speed": 1,
+        "speed_type": "TDHS",
+        "sample_text": "Text of sample_audio"
+      }
+    }
+  ],
+  "links": [
+    [
+      8,
+      2,
+      0,
+      9,
+      1,
+      "AUDIO"
+    ],
+    [
+      9,
+      8,
+      0,
+      9,
+      0,
+      "MODEL"
+    ],
+    [
+      10,
+      9,
+      0,
+      6,
+      0,
+      "STRING"
+    ],
+    [
+      11,
+      2,
+      0,
+      5,
+      0,
+      "AUDIO"
+    ],
+    [
+      12,
+      7,
+      0,
+      10,
+      0,
+      "MODEL"
+    ],
+    [
+      13,
+      9,
+      0,
+      10,
+      2,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Whisper transcribe reference test",
+      "bounding": [
+        -153.93338710720445,
+        140.64200633153462,
+        1955.4187606190621,
+        771.1650435305859
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6083942721650162,
+      "offset": [
+        238.77185099480204,
+        88.60917694263742
+      ]
+    },
+    "frontendVersion": "1.58.5"
+  },
+  "version": 0.4
+}
