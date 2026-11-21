@@ -7,8 +7,6 @@ ComfyUI nodes for [https://github.com/Edge0-AI/Audio8_TTS/](Audio8)
 [Example workflows](example_workflows/) or you can get them from the templates section in ComfyUI
 
 
-Note: The models use trust\_remote\_code=True, which means whomever controls the huggingface repo can do things on your machinhe.  Same with this extension.  If you'd like to use .safetensors, try this extension for Audio8-TTS-Realistic-0.6b TTS: https://github.com/Pepehoschi/ComfyUI-Audio8TTS/
-
 
 | Model | VRAM |
 | :--- | ---: |
@@ -17,7 +15,7 @@ Note: The models use trust\_remote\_code=True, which means whomever controls the
 | ARK-ASR-3B | 8GB |
 
 
-### Multi voices output...
+### Multi voices output
 
 Put your sample voice files into the `input` folder like...
 ```
@@ -37,3 +35,9 @@ Then you can use prompts for different voices...
 ```
 
 The `main` voice refers to the one with no name `LanguageTest.flac`.
+
+[Example output audio](example_audios/FishAndChipsExample.flac)
+
+### Security
+
+Note: The models use trust\_remote\_code=True, which means whomever controls the huggingface repo can do things on your machinhe.  Same with this extension.  If you'd like to use .safetensors, try this extension for Audio8-TTS-Realistic-0.6b TTS: https://github.com/Pepehoschi/ComfyUI-Audio8TTS/
