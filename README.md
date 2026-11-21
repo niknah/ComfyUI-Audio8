@@ -12,7 +12,7 @@ Note: The models use trust\_remote\_code=True, which means whomever controls the
 
 | Model | VRAM |
 | :--- | ---: |
-| Audio8-TTS-Realistic-Air (uses more with multiple voices) | 2GB+ |
+| Audio8-TTS-Realistic-Air (uses more memory with multiple voices) | 2GB+ |
 | ARK-ASR-0.6B | 3GB |
 | ARK-ASR-3B | 8GB |
 

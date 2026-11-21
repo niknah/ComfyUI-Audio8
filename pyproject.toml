@@ -30,6 +30,6 @@ Repository = "https://github.com/niknah/ComfyUI-Audio8"
 [tool.comfy]
 PublisherId = "niknah"
 DisplayName = "Audio8"
-Icon = ""
+Icon = "https://raw.githubusercontent.com/niknah/ComfyUI-Audio8/refs/heads/main/imgs/ComfyUI-Audio8-logo.webp"
 includes = []
 # "requires-comfyui" = ">=1.0.0"  # ComfyUI version compatibility
