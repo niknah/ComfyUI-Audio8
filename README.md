@@ -36,7 +36,7 @@ Then you can use prompts for different voices...
 
 The `main` voice refers to the one with no name `LanguageTest.flac`.
 
-[Example output audio](example_audios/FishAndChipsExample.flac)
+<video src="example_audios/FishAndChipsExample.flac" controls></video>
 
 ### Security
 
