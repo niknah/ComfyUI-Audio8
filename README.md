@@ -43,7 +43,8 @@ https://github.com/user-attachments/assets/d9da26b6-000d-4a8c-9ca0-97652fd2ce20
 
 An example using [different emotions](example_workflows/audio8_TTS_emotions.json)
 
-https://raw.githubusercontent.com/niknah/ComfyUI-Audio8/refs/heads/main/example_audios/Emotions.mp3
+[Emotions.mp3](https://github.com/user-attachments/files/35320839/Emotions.mp3)
+
 
 
 ### Security
