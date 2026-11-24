@@ -2,7 +2,7 @@
   "id": "773fb847-cf2e-4cd1-9884-b61a23bad312",
   "revision": 0,
   "last_node_id": 10,
-  "last_link_id": 13,
+  "last_link_id": 15,
   "nodes": [
     {
       "id": 2,
@@ -25,7 +25,7 @@
           "type": "AUDIO",
           "links": [
             8,
-            11
+            15
           ]
         }
       ],
@@ -55,13 +55,13 @@
         88
       ],
       "flags": {},
-      "order": 3,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
           "name": "audio",
           "type": "AUDIO",
-          "link": 11
+          "link": 14
         }
       ],
       "outputs": [
@@ -91,7 +91,7 @@
         122
       ],
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [
         {
@@ -140,6 +140,8 @@
         }
       ],
       "properties": {
+        "cnr_id": "audio8",
+        "ver": "e78fb31f7b0c92b152682dafda4234a203128095",
         "Node name for S&R": "Audio8TTSLoadModel"
       },
       "widgets_values": [
@@ -174,6 +176,8 @@
         }
       ],
       "properties": {
+        "cnr_id": "audio8",
+        "ver": "e78fb31f7b0c92b152682dafda4234a203128095",
         "Node name for S&R": "Audio8ASRLoadModel"
       },
       "widgets_values": [
@@ -195,7 +199,7 @@
         46
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [
         {
@@ -220,6 +224,8 @@
         }
       ],
       "properties": {
+        "cnr_id": "audio8",
+        "ver": "e78fb31f7b0c92b152682dafda4234a203128095",
         "Node name for S&R": "Audio8ASRFromModel"
       }
     },
@@ -235,7 +241,7 @@
         282
       ],
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
@@ -247,7 +253,7 @@
           "name": "sample_audio",
           "shape": 7,
           "type": "AUDIO",
-          "link": null
+          "link": 15
         },
         {
           "name": "sample_text",
@@ -263,15 +269,19 @@
         {
           "name": "AUDIO",
           "type": "AUDIO",
-          "links": null
+          "links": [
+            14
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "audio8",
+        "ver": "e78fb31f7b0c92b152682dafda4234a203128095",
         "Node name for S&R": "Audio8TTSFromModel"
       },
       "widgets_values": [
         "This is what I want to say",
-        1510,
+        102,
         "randomize",
         "",
         1,
@@ -280,7 +290,7 @@
       ],
       "widgets_values_named": {
         "speech": "This is what I want to say",
-        "seed": 1510,
+        "seed": 102,
         "control_after_generate": "randomize",
         "sample": "",
         "speed": 1,
@@ -315,14 +325,6 @@
       "STRING"
     ],
     [
-      11,
-      2,
-      0,
-      5,
-      0,
-      "AUDIO"
-    ],
-    [
       12,
       7,
       0,
@@ -337,6 +339,22 @@
       10,
       2,
       "STRING"
+    ],
+    [
+      14,
+      10,
+      0,
+      5,
+      0,
+      "AUDIO"
+    ],
+    [
+      15,
+      2,
+      0,
+      10,
+      1,
+      "AUDIO"
     ]
   ],
   "groups": [
@@ -356,13 +374,20 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6083942721650162,
+      "scale": 0.5444303332049312,
       "offset": [
-        238.77185099480204,
-        88.60917694263742
+        717.6970202401282,
+        216.2735369621083
       ]
     },
-    "frontendVersion": "1.58.5"
+    "frontendVersion": "1.58.5",
+    "comfyui_mcp": {
+      "workflow_uuid": "3685f0df-1ecf-4447-ade8-84beaedcbfce"
+    },
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
   },
   "version": 0.4
 }
