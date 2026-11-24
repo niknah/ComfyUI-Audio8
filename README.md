@@ -6,6 +6,12 @@ ComfyUI nodes for [https://github.com/Edge0-AI/Audio8_TTS/](Audio8)
 
 [Example workflows](example_workflows/) or you can get them from the templates section in ComfyUI
 
+Supports 23 languages
+
+| Coverage | Languages |
+|---|---|
+| Supported in Preview (11) | Cantonese, Chinese, Dutch, English, French, German, Italian, Japanese, Korean, Polish, Spanish |
+| Added in Realistic Air (12) | Arabic, Finnish, Hindi, Indonesian, Malay, Norwegian, Portuguese, Russian, Swedish, Thai, Turkish, Vietnamese |
 
 
 | Model | VRAM |
